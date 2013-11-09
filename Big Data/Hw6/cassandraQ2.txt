@@ -1,0 +1,33 @@
+./cqlsh -3 csac0
+
+CREATE KEYSPACE rxs115330Cli3 WITH strategy_class='SimpleStrategy' AND strategy_options:replication_factor='1';
+
+USE rxs115330Cli3;
+
+1)CREATE TABLE WhiteHouseVisitorLogs
+(
+namelast varchar,
+namefirst varchar,
+namemid varchar,
+uin varchar,
+bdgnbr varchar,
+access_type varchar,
+toa varchar,
+poa varchar,
+tod varchar,
+pod varchar,
+appt_made_date varchar,
+PRIMARY KEY(namelast,namefirst,appt_made_date)
+
+);
+
+2)COPY whitehousevisitorlogs(namelast,namefirst,namemid,uin,bdgnbr,access_type,toa,poa,tod,pod,appt_made_date) FROM '/people/cs/k/kma041000/BigData/HW6/White_House.csv';
+
+3)INSERT INTO whitehousevisitorlogs(namelast,namefirst,namemid,uin,bdgnbr,access_type,toa,poa,tod,pod,appt_made_date) values('omar','ahmad','r','u96223','','','','','','','3/31/2011 0:00');
+
+4)truncate whitehousevisitorlogs;
+
+5)drop table whitehousevisitorlogs;
+
+I
+

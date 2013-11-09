@@ -1,0 +1,11 @@
+drop table whiteHouse;
+CREATE TABLE whiteHouse (last_name STRING , first_name STRING ,mid_name STRING , UIN STRING , BDGNBR INT, ACCESS_TYPE STRING ,TOA STRING ,POA STRING,TOD STRING ,POD STRING,APPT_MADE_DATE STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
+
+LOAD DATA local INPATH '/people/cs/k/kma041000/BigData/hive/white_house/White_House.txt' INTO TABLE whiteHouse;
+
+
+Hive Query:
+
+
+ select  last_name, first_name, count(*) as countval from whiteHouse group by last_name,first_name order by countval desc limit 10;

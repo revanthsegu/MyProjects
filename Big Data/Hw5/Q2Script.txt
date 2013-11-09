@@ -1,0 +1,8 @@
+/usr/local/mahout-0.7/bin/mahout seq2sparse -i /reviews-seq -o reviews-vectors-revanth/ -ow -chunk 100    -x 60    -seq    -ml 50    -n 2    -nv
+hadoop fs -ls reviews-vectors-revanth
+/usr/local/mahout-0.7/bin/mahout split -i reviews-vectors-revanth/tfidf-vectors --trainingOutput train-vectors-revanth --testOutput test-vectors-revanth --randomSelectionPct 30 --overwrite --sequenceFiles -xm sequential
+/usr/local/mahout-0.7/bin/mahout trainnb -i train-vectors-revanth -el -li labelindex -o model -ow -c
+/usr/local/mahout-0.7/bin/mahout testnb -i train-vectors-revanth -m model -l labelindex -ow -o reviews-testing -c
+/usr/local/mahout-0.7/bin/mahout testnb -i train-vectors-revanth -m model -l labelindex -ow -o /Q2tr-revanth.txt -c
+/usr/local/mahout-0.7/bin/mahout testnb -i test-vectors-revanth -m model -l labelindex -ow -o reviews-testing -c
+/usr/local/mahout-0.7/bin/mahout testnb -i test-vectors-revanth -m model -l labelindex -ow -o /Q2te-revanth.txt -c

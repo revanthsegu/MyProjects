@@ -1,0 +1,28 @@
+InMemory Map-Side Join
+
+America - - [03/Aug/1995:12:32:38 -0400] "GET /finance//brrow_1t.gif HTTP/1.0" 200 632
+America - - [03/Aug/1995:12:32:39 -0400] "GET /ksc.html HTTP/1.0" 200 7280
+America - - [03/Aug/1995:12:32:40 -0400] "GET /images/ksclogo-medium.gif HTTP/1.0" 200 5866
+America - - [03/Aug/1995:12:32:41 -0400] "GET /images/NASA-logosmall.gif HTTP/1.0" 200 786
+America - - [03/Aug/1995:12:32:41 -0400] "GET /images/MOSAIC-logosmall.gif HTTP/1.0" 200 363
+America - - [03/Aug/1995:12:32:41 -0400] "GET /images/USA-logosmall.gif HTTP/1.0" 200 234
+America - - [03/Aug/1995:12:32:41 -0400] "GET /images/WORLD-logosmall.gif HTTP/1.0" 200 669
+America - - [03/Aug/1995:12:32:44 -0400] "GET /history/apollo/apollo-13/images/ HTTP/1.0" 200 1851
+America - - [03/Aug/1995:12:32:45 -0400] "GET /icons/blank.xbm HTTP/1.0" 200 509
+America - - [03/Aug/1995:12:32:45 -0400] "GET /icons/menu.xbm HTTP/1.0" 200 527
+America - - [03/Aug/1995:12:32:45 -0400] "GET /icons/image.xbm HTTP/1.0" 200 509
+
+
+
+Reduce side Join Sample Results
+CN      - - [22/Jul/1995:03:10:48 -0400] "GET /history/apollo/images/apollo-logo1.gif HTTP/1.0" 200 1173
+CN      - - [22/Jul/1995:03:10:48 -0400] "GET /history/apollo/images/footprint-small.gif HTTP/1.0" 200 18149
+DE      - - [24/Aug/1995:10:26:55 -0400] "GET /facts/facts.html HTTP/1.0" 200 4970
+DE      - - [21/Aug/1995:03:22:15 -0400] "GET /shuttle/missions/missions.html HTTP/1.0" 200 8677
+DE      - - [08/Aug/1995:11:05:31 -0400] "GET /ksc.html HTTP/1.0" 200 7131
+DE      - - [13/Jul/1995:09:00:24 -0400] "GET /shuttle/countdown/ HTTP/1.0" 200 4247
+DE      - - [13/Jul/1995:05:42:43 -0400] "GET /shuttle/missions/sts-70/mission-sts-70.html HTTP/1.0" 200 13697
+FR      - - [26/Jul/1995:15:22:11 -0400] "GET /history/apollo/apollo-13/apollo-13.html HTTP/1.0" 200 18556
+FR      - - [05/Jul/1995:11:43:48 -0400] "GET /software/winvn/faq/WINVNFAQ-I-6.html HTTP/1.0" 200 1325
+FR      - - [05/Jul/1995:11:41:15 -0400] "GET /software/winvn/winvn.html HTTP/1.0" 200 9867
+FR      - - [05/Jul/1995:11:43:27 -0400] "GET /software/winvn/faq/WINVNFAQ-Contents.html HTTP/1.0" 200 3626

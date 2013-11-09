@@ -1,0 +1,20 @@
+drop table nasa_http;
+drop table host_country;
+drop table country_name;
+
+CREATE TABLE nasa_http (ip STRING, value STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t';
+
+CREATE TABLE host_country (ip STRING , countryAbb STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t';
+
+CREATE TABLE country_name (countryAbb STRING , countryName STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t';
+
+LOAD DATA local INPATH '/people/cs/k/kma041000/BigData/hive/nasa/NASA_HTTP.txt' INTO TABLE nasa_http;
+LOAD DATA local INPATH '/people/cs/k/kma041000/BigData/hive/nasa/HOST_COUNTRY.txt' INTO TABLE host_country;
+LOAD DATA local INPATH '/people/cs/k/kma041000/BigData/hive/nasa/COUNTRY_NAME.txt' INTO TABLE country_name;
+
+Hive query:
+
+select n.ip , n.value, h.countryAbb, c.countryName from nasa_http n  JOIN host_country h on (n.ip=h.ip) JOIN country_name c on (h.countryAbb=c.countryAbb);

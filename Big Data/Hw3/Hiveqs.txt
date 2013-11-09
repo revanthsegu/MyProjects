@@ -1,0 +1,70 @@
+Part 5
+drop table tbletopk1;
+CREATE TABLE tbletopk1 (last_name STRING , first_name STRING ,mid_name STRING , UIN STRING , BDGNBR INT, ACCESS_TYPE STRING ,TOA STRING ,POA STRING,TOD STRING ,POD STRING,APPT_MADE_DATE STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
+
+LOAD DATA local INPATH '/people/cs/k/kma041000/BigData/hive/white_house/White_House.txt' INTO TABLE tbletopk1;
+
+
+Hive Query:
+
+
+ select  last_name, first_name, count(*) as countval from tbletopk1 group by last_name,first_name order by countval desc limit 10;
+
+Part6
+
+drop table nasa_table;
+drop table host_table;
+drop table cntry_nam;
+CREATE TABLE nasa_table (ip STRING, val STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t';
+
+CREATE TABLE host_table (ip STRING , cntabb STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t';
+
+CREATE TABLE cntry_nam (cntabb STRING , cntrname STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t';
+
+LOAD DATA local INPATH '/people/cs/k/kma041000/BigData/hive/nasa/NASA_HTTP.txt' INTO TABLE nasa_table;
+LOAD DATA local INPATH '/people/cs/k/kma041000/BigData/hive/nasa/HOST_COUNTRY.txt' INTO TABLE host_table;
+LOAD DATA local INPATH '/people/cs/k/kma041000/BigData/hive/nasa/COUNTRY_NAME.txt' INTO TABLE cntry_nam;
+
+
+
+Hive query:
+
+select nasa_table.ip , nasa_table.val, host_table.cntabb, cntry_nam.cntrname from nasa_table  JOIN host_table on (nasa_table.ip=host_table.ip) JOIN cntry_nam on (host_table.cntabb=cntry_nam.cntabb);
+
+
+
+Part 7:
+drop table tblepart;
+CREATE TABLE tblepart (last_name STRING , first_name STRING ,mid_name STRING , UIN STRING , BDGNBR INT, ACCESS_TYPE STRING ,TOA STRING ,POA STRING,TOD STRING ,POD STRING,APPT_MADE_DATE STRING)
+partitioned by (year INT)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
+
+LOAD DATA local INPATH '/people/cs/k/kma041000/BigData/hive/white_house/partition/2009' INTO TABLE tblepart Partition (year = 2009);
+LOAD DATA local INPATH '/people/cs/k/kma041000/BigData/hive/white_house/partition/2010' INTO TABLE tblepart Partition (year = 2010);
+LOAD DATA local INPATH '/people/cs/k/kma041000/BigData/hive/white_house/partition/2011' INTO TABLE tblepart Partition (year = 2011);
+
+
+Hive query:
+select * from tblepart where year = 2009;
+
+
+Part 8:
+drop table tbl2009 ;
+drop table tbl2010;
+drop table tbl2011;
+CREATE TABLE tbl2009 (last_name STRING, first_name STRING) 
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
+CREATE TABLE tbl2010 (last_name STRING, first_name STRING) 
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
+CREATE TABLE tbl2011 (last_name STRING, first_name STRING) 
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
+
+insert into TABLE tbl2009 select last_name, first_name from tblepart where year = 2009;
+
+insert into TABLE tbl2010 select last_name, first_name from tblepart where year = 2010;
+
+insert into TABLE tbl2011 select last_name, first_name from tblepart where year = 2011;

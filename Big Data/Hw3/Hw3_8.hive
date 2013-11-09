@@ -1,0 +1,19 @@
+drop table table2009;
+drop table table2010;
+drop table table2011;
+
+
+CREATE TABLE table2009 (last_name STRING, first_name STRING) 
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
+
+CREATE TABLE table2010 (last_name STRING, first_name STRING) 
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
+
+CREATE TABLE table2011 (last_name STRING, first_name STRING) 
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
+
+insert into TABLE table2009 select last_name, first_name from tablePartition where year = 2009;
+
+insert into TABLE table2010 select last_name, first_name from tablePartition where year = 2010;
+
+insert into TABLE table2011 select last_name, first_name from tablePartition where year = 2011;

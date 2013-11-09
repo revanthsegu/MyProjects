@@ -1,0 +1,25 @@
+cd /usr/local/mahout-0.7/bin
+./mahout seqdirectory    -c UTF-8    -i /reviews-extracted/ -o /reviews-sequential-revanth
+
+hadoop fs -ls /reviews-sequential-revanth
+
+hadoop fs -tail /reviews-sequential-revanth/chunk-0
+
+./mahout seqdumper -i /reviews-sequential-revanth/chunk-0 | more
+
+./mahout seq2sparse    -i /reviews-sequential-revanth/ -o /reviews-vectors-revanth/ -ow -chunk 100    -x 80    -seq    -ml 50    -n 2    -nv
+
+./mahout seqdumper -i /reviews-vectors-revanth/tfidf-vectors/part-r-00000
+./mahout seqdumper -i /reviews-vectors-revanth/tokenized-documents/part-m-00000
+
+./mahout seqdumper    -i /reviews-vectors-revanth/dictionary.file-0 | more
+
+./mahout kmeans    -i /reviews-vectors-revanth/tfidf-vectors/ -c /reviews-kmeans-centroids -cl    -o /reviews-kmeans-clusters-revanth -k 60 -ow    -x 10    -dm org.apache.mahout.common.distance.CosineDistanceMeasure
+
+mkdir /tmp/mahout-revanth/
+
+./mahout clusterdump -d /reviews-vectors-revanth/dictionary.file-0 -dt sequencefile -i /reviews-kmeans-clusters-revanth/clusters-*-final/part-r-00000 -n 20 -b 100 -o /tmp/mahout-revanth/q1cls.out -p /reviews-kmeans-clusters-revanth/clusteredPoints/
+
+more /tmp/mahout-revanth/q1cls.out
+
+./mahout seqdumper -i /reviews-kmeans-clusters-revanth/clusteredPoints/part-m-00000 | more

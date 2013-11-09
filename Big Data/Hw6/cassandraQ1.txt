@@ -1,0 +1,67 @@
+./cassandra-cli -host csac0
+
+1)
+CREATE KEYSPACE rxs115330
+with placement_strategy = 'org.apache.cassandra.locator.SimpleStrategy'
+and strategy_options = {replication_factor:1};
+USE rxs115330;
+
+CREATE COLUMN FAMILY WhiteHouseVisitors 
+WITH comparator =UTF8Type
+AND key_validation_class=UTF8Type
+AND column_metadata =[
+{column_name:namelast,validation_class:UTF8Type,index_type:KEYS}
+{column_name:namefirst,validation_class:UTF8Type,index_type:KEYS}
+{column_name:namemid,validation_class:UTF8Type}
+{column_name:uid,validation_class:UTF8Type}
+{column_name:bdgnbr,validation_class:UTF8Type}  
+{column_name:access_type,validation_class:UTF8Type}
+{column_name:toa,validation_class:UTF8Type}
+{column_name:poa,validation_class:UTF8Type}
+{column_name:tod,validation_class:UTF8Type}
+{column_name:pod,validation_class:UTF8Type}
+{column_name:appt_made_date,validation_class:UTF8Type}
+];
+
+
+2)
+i)
+SET WhiteHouseVisitors['u35736'][uid]='u35736';
+SET WhiteHouseVisitors['u35736'][namelast]='aalseth';
+SET WhiteHouseVisitors['u35736'][namefirst]='robert';  
+SET WhiteHouseVisitors['u35736'][access_type]='va';
+SET WhiteHouseVisitors['u35736'][appt_made_type]='8/21/2010 7:56';
+
+ii)
+SET WhiteHouseVisitors['u30782'][uid]='u30782';
+SET WhiteHouseVisitors['u30782'][namelast]='binshaieg';
+SET WhiteHouseVisitors['u30782'][namefirst]='abdullah';  
+
+iii)
+SET WhiteHouseVisitors['u30799'][uid]='u30799';
+SET WhiteHouseVisitors['u30799'][namelast]='alawneh';
+SET WhiteHouseVisitors['u30799'][namefirst]='muhammad';  
+SET WhiteHouseVisitors['u30799'][bdgnbr]='80268';
+SET WhiteHouseVisitors['u30799'][access_type]='va';
+SET WhiteHoseVisitors['u30799'][toa]='8/3/2010 15:38';
+SET WhiteHouseVisitors['u30799'][tod]='d1s01';
+SET WhiteHouseVisitors['u30799'][poa]='8/3/2010 16:52';
+SET WhiteHouseVisitors['u30799'][pod]='d1s01'; 
+SET WhiteHouseVisitors['u30799'][appt_made_date]='8/2/2010 12:50';
+
+
+
+3)
+
+i)get WhiteHouseVisitors where namelast='alawneh' and namefirst='muhammad';
+
+ii)list WhiteHouseVisitors;
+
+iii)#Get the row key first.
+get WhiteHouseVisitors where namelast='alawneh' and namefirst='muhammad';
+
+#command  for deleting visitors as mentioned in question
+
+del WhiteHouseVisitors['u30799'][pod];
+
+iv)drop column family WhiteHouseVisitors;

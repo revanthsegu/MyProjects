@@ -1,0 +1,13 @@
+drop table tablePartition;
+
+CREATE TABLE tablePartition (last_name STRING , first_name STRING ,mid_name STRING , UIN STRING , BDGNBR INT, ACCESS_TYPE STRING ,TOA STRING ,POA STRING,TOD STRING ,POD STRING,APPT_MADE_DATE STRING)
+partitioned by (year INT)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
+
+LOAD DATA local INPATH '/people/cs/k/kma041000/BigData/hive/white_house/partition/2009' INTO TABLE tablePartition Partition (year = 2009);
+LOAD DATA local INPATH '/people/cs/k/kma041000/BigData/hive/white_house/partition/2010' INTO TABLE tablePartition Partition (year = 2010);
+LOAD DATA local INPATH '/people/cs/k/kma041000/BigData/hive/white_house/partition/2011' INTO TABLE tablePartition Partition (year = 2011);
+
+
+Hive query:
+select * from tablePartition where year = 2009;
