@@ -1,0 +1,23 @@
+subject
+re :
+re 
+original message
+forwarded
+,
+#
+!
+/
+\
+@
+.
+;
+:
+-
+_
+?
+(
+)
+$
+/
+"
+'s
