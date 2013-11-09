@@ -1,0 +1,621 @@
+Program Description:
+ 
+   Program scans all files that start with name cranfield in the path given from command line arguments if it encounters any file which does not start
+with name name "cranfield" and prints the fie names on console.Program First reads hw3.queries file and gives the out put on console, after completing queries from 
+file it will take quries from user though terminal and results are shown on console.Program is tested in UTDApache Machine
+
+
+The program can be executed by following the five steps given below:
+
+1.javac QueryReqults.java
+2.javac Stemmer.java
+3.javac TermFrequency.java
+4.javac TokenFrequency.java
+5.java QueryReqults "/people/cs/s/sanda/cs6322/Cranfield" "/people/cs/s/sanda/cs6322/resourcesIR/stopwords" "/people/cs/s/sanda/cs6322/hw3.queries"
+
+
+
+The Program expects three command line arguments and they are explained below:
+ a.First argumet is path of location of Cranfield collection if argument not provided program will assume the 
+   Cranfield Collection to be located in the current directory
+ b.Second argument is the location of stopwords file if argument not provided program will assume the 
+   stopwords file to be located in the current directory
+ c.Third argument is the location of hw3.queries if argument not provided program will assume the 
+   queries file to be located in the current directory  
+   
+   other ways to execute the program:
+   1.if the location of Cranfield collection is current directoy and stop word file is also located in current directory(if you want to skip any argument of the three just give a "." character asargument)
+   java QueryReqults . . .
+   java QueryReqults "/people/cs/s/sanda/cs6322/Cranfield" . . (if stop word file is located in current directory)
+   java QueryReqults . "/people/cs/s/sanda/cs6322/resourcesIR/stopwords" . (if cranfield Collection and and queries file is located in current directory)
+
+ There were no major differences between TW1 and TW2 Standard.
+ 
+ Assumptiions made:
+ a.It is assumed that all files in Cranfield collection Starts with name "cranfield". Program skips the fiels 
+   which does not start with name "cranfield" and prints the fie names on console.
+   
+   
+An example output of program:
+Exection Started !!
+Looking for Stopwords file in the path: /people/cs/s/sanda/cs6322/resourcesIR/stopwords
+Processed Stop Words
+Stop Words are: [a, all, an, and, any, are, as, be, been, but, by , few, for, have, he, her, here, him, his, how, i, in, is, it, its, many, me, my, none, of, on , or, our, she, some, the, their, them, there, they, that , this, us, was, what, when, where, which, who, why, will, with, you, your]
+Looking for Quries file in the path: /people/cs/s/sanda/cs6322/hw3.queries
+Quriey List:[ what similarity laws must be obeyed when constructing aeroelastic models of heated high speed aircraft ,  what are the structural and aeroelastic problems associated with flight of high speed aircraft ,  what problems of heat conduction in composite slabs have been solved so far ,  can a criterion be developed to show empirically the validity of flow solutions for chemically reacting gas mixtures based on the simplifying assumption of instantaneous local chemical equilibrium ,  what chemical kinetic system is applicable to hypersonic aerodynamic problems ,  what theoretical and experimental guides do we have as to turbulent couette flow behaviour ,  is it possible to relate the available pressure distributions for an ogive forebody at zero angle of attack to the lower surface pressures of an equivalent ogive forebody at angle of attack ,  what methods -dash exact or approximate -dash are presently available for predicting body pressures at angle of attack,  papers on internal /slip flow/ heat transfer studies ,  are real-gas transport properties for air available over a wide range of enthalpies and densities ,  is it possible to find an analytical,  similar solution of the strong blast wave problem in the newtonian approximation ,  how can the aerodynamic performance of channel flow ground effect machines be calculated ,  what is the basic mechanism of the transonic aileron buzz ,  papers on shock-sound wave interaction ,  material properties of photoelastic materials ,  can the transverse potential flow about a body of revolution be calculated efficiently by an electronic computer ,  can the three-dimensional problem of a transverse potential flow about a body of revolution be reduced to a two-dimensional problem ,  are experimental pressure distributions on bodies of revolution at angle of attack available ,  does there exist a good basic treatment of the dynamics of re-entry combining consideration of realistic effects with relative simplicity of results ,  has anyone formally determined the influence of joule heating,  produced by the induced current,  in magnetohydrodynamic free convection flows under general conditions ]
+Processed Quries
+Looking for Cranfield collection in:
+/people/cs/s/sanda/cs6322/Cranfield
+
+Processed 100 files.
+Processed 200 files.
+Processed 300 files.
+Processed 400 files.
+Processed 500 files.
+Processed 600 files.
+Processed 700 files.
+Processed 800 files.
+Processed 900 files.
+Processed 1000 files.
+Processed 1100 files.
+Processed 1200 files.
+Processed 1300 files.
+Processed 1400 files.
+Processing files from database completed!!
+Total number of files processed:1400
+Total time taken to scan all files from database in ms : 13801
+Query:what similarity laws must be obeyed when constructing aeroelastic models of heated high speed aircraft
+Indexed Query: similar law must obei construct aeroelast model heat high speed aircraft
+Top 10 results by TW1 Standard
+Rank : W1Score : DocId : Headline
+1 : 1.999321909373958 : cranfield0051 :  theory of aircraft structural models subjected to aerodynamic heating and external loads .
+2 : 1.9136792635458875 : cranfield0486 :  similarity laws for aerothermoelastic testing .
+3 : 1.8226365071933548 : cranfield0329 :  various aerodynamic characteristics in hypersonic rarefied gas flow .
+4 : 1.5602901737292123 : cranfield0573 :  viscous hypersonic similitude .
+5 : 1.5574314390422193 : cranfield0012 :  some structural and aerelastic considerations of high speed flight .
+6 : 1.5482924538525495 : cranfield0014 :  piston theory - a new aerodynamic tool for the aeroelastician .
+7 : 1.5291818661403933 : cranfield1147 :  heat transfer to bodies traveling at high speed in the upper atmosphere .
+8 : 1.5161006138319353 : cranfield0792 :  some low speed problems of high speed aircraft .
+9 : 1.4984735167099752 : cranfield0878 :  experimental model techniques and equipment for flutter investigations .
+10 : 0.09607686242413663 : cranfield0650 :  some design problems of hovercraft .
+Top 10 results by TW2 Standard
+Rank : W2Score : DocId: Headline
+1 : 2.4575791848742425 : cranfield0051 :  theory of aircraft structural models subjected to aerodynamic heating and external loads .
+2 : 2.370639484214375 : cranfield0486 :  similarity laws for aerothermoelastic testing .
+3 : 2.279826680046727 : cranfield0012 :  some structural and aerelastic considerations of high speed flight .
+4 : 2.274195207156463 : cranfield0878 :  experimental model techniques and equipment for flutter investigations .
+5 : 2.229081449398043 : cranfield0573 :  viscous hypersonic similitude .
+6 : 2.173067060521829 : cranfield0746 :  aeroelastic problems in connection with high speed flight .
+7 : 2.1577378261747935 : cranfield0944 :  one dimensional heat conduction through the skin of a vehicle upon entering a planetary atmosphere at constant velocity and entry angle .
+8 : 2.142939046873561 : cranfield0141 :  free-flight techniques for high speed aerodynamic research .
+9 : 2.137748860394164 : cranfield0879 :  flutter model testing at transonic speeds .
+10 : 1.7922992242068523 : cranfield0650 :  some design problems of hovercraft .
+Query:what are the structural and aeroelastic problems associated with flight of high speed aircraft
+Indexed Query: structur aeroelast problem associ flight high speed aircraft
+Top 10 results by TW1 Standard
+Rank : W1Score : DocId : Headline
+1 : 1.7619149502186402 : cranfield0012 :  some structural and aerelastic considerations of high speed flight .
+2 : 1.3536045657356572 : cranfield0051 :  theory of aircraft structural models subjected to aerodynamic heating and external loads .
+3 : 1.329389699023628 : cranfield0746 :  aeroelastic problems in connection with high speed flight .
+4 : 1.3120106732967993 : cranfield0014 :  piston theory - a new aerodynamic tool for the aeroelastician .
+5 : 1.2862074266265184 : cranfield0792 :  some low speed problems of high speed aircraft .
+6 : 1.2694115062520344 : cranfield0100 :  vibration isolation of aircraft power plants .
+7 : 1.222775364332683 : cranfield0172 :  some aerodynamic considerations of nozzle afterbody combination .
+8 : 1.2067417402143539 : cranfield1380 :  the problem of obtaining high lift-drag ratios at supersonic speeds .
+9 : 1.1841424661242321 : cranfield1169 :  hangling qualities experience with several vtol research aircraft .
+10 : 0.3870419502363462 : cranfield0650 :  some design problems of hovercraft .
+Top 10 results by TW2 Standard
+Rank : W2Score : DocId: Headline
+1 : 1.8819960529744 : cranfield0012 :  some structural and aerelastic considerations of high speed flight .
+2 : 1.5984720700697124 : cranfield0746 :  aeroelastic problems in connection with high speed flight .
+3 : 1.5952896078400178 : cranfield0051 :  theory of aircraft structural models subjected to aerodynamic heating and external loads .
+4 : 1.5135367040099557 : cranfield0100 :  vibration isolation of aircraft power plants .
+5 : 1.502671575043889 : cranfield1169 :  hangling qualities experience with several vtol research aircraft .
+6 : 1.4944928568146356 : cranfield1089 :  aerodynamic characteristics of propeller-driven vtol aircraft .
+7 : 1.4787339178944028 : cranfield0834 :  limit design for economical missile structures .
+8 : 1.4744432639017135 : cranfield0172 :  some aerodynamic considerations of nozzle afterbody combination .
+9 : 1.4539035334788384 : cranfield0810 :  the shock wave noise problem of supersonic aircraft in steady flight .
+10 : 1.2693362596996103 : cranfield0650 :  some design problems of hovercraft .
+Query:what problems of heat conduction in composite slabs have been solved so far
+Indexed Query: problem heat conduct composit slab solv so far
+Top 10 results by TW1 Standard
+Rank : W1Score : DocId : Headline
+1 : 1.6202462344148494 : cranfield0144 :  heat flow in composite slabs .
+2 : 1.5009577891908379 : cranfield0485 :  linear heat flow in a composite slab .
+3 : 1.4378015381978275 : cranfield1072 :  ignition and combustion in a laminar mixing zone .
+4 : 1.425005142911996 : cranfield0005 :  one-dimensional transient heat conduction into a double-layer slab subjected to a linear heat input for a small time internal .
+5 : 1.387509055348558 : cranfield0091 :  periodic temperature distribution in a two-layer composite slab .
+6 : 1.3210598286342403 : cranfield0090 :  periodic temperature distributions in a two-layer composite slab .
+7 : 1.2957157711409928 : cranfield0344 :  some experimental techniques in mass transfer cooling .
+8 : 1.264288382609377 : cranfield0542 :  biot's variational principle in heat conduction .
+9 : 1.2505153647490501 : cranfield0579 :  further developments of new methods in heat flow analysis .
+10 : 0.1829478683716013 : cranfield0650 :  some design problems of hovercraft .
+Top 10 results by TW2 Standard
+Rank : W2Score : DocId: Headline
+1 : 1.9426846438542262 : cranfield0485 :  linear heat flow in a composite slab .
+2 : 1.9189814140505508 : cranfield0005 :  one-dimensional transient heat conduction into a double-layer slab subjected to a linear heat input for a small time internal .
+3 : 1.8975482462665898 : cranfield0144 :  heat flow in composite slabs .
+4 : 1.799064080251565 : cranfield0399 :  conduction of heat in composite slabs .
+5 : 1.7519289868032502 : cranfield0090 :  periodic temperature distributions in a two-layer composite slab .
+6 : 1.7437457776420136 : cranfield0091 :  periodic temperature distribution in a two-layer composite slab .
+7 : 1.7245223188478325 : cranfield0181 :  some problems on heat conduction in stratiform bodies .
+8 : 1.6384596259146473 : cranfield0542 :  biot's variational principle in heat conduction .
+9 : 1.6324188521898395 : cranfield0579 :  further developments of new methods in heat flow analysis .
+10 : 1.32500028604594 : cranfield0650 :  some design problems of hovercraft .
+Query:can a criterion be developed to show empirically the validity of flow solutions for chemically reacting gas mixtures based on the simplifying assumption of instantaneous local chemical equilibrium
+Indexed Query: can criterion develop to show empir valid flow solut chemic react ga mixtur base on simplifi assumpt instantan local chemic equilibrium
+Top 10 results by TW1 Standard
+Rank : W1Score : DocId : Headline
+1 : 2.965924461484596 : cranfield1061 :  turbulent mixing of a rocket exhaust jet with a supersonic stream including chemical reactions .
+2 : 2.9130230126499406 : cranfield0166 :  flow of chemically reacting gas mixtures .
+3 : 2.7794393145254452 : cranfield0185 :  some possibilities of using gas mixtures other than in aerodynamic research .
+4 : 2.64204853905851 : cranfield0488 :  a reaction-rate parameter for gasdynamics of a chemically reacting gas mixture .
+5 : 2.5296591880143184 : cranfield0575 :  atomic recombination in a hypersonic wind tunnel nozzle .
+6 : 2.515965801731863 : cranfield0024 :  theory of stagnation point heat transfer in dissociated air .
+7 : 2.500544912894322 : cranfield0576 :  viscous and inviscid stagnation flow in a dissociated hypervelocity free  stream .
+8 : 2.4262618792248607 : cranfield1072 :  ignition and combustion in a laminar mixing zone .
+9 : 2.413809673551077 : cranfield1252 :  on the approach to chemical and vibrational equilibrium behind a strong normal shock wave .
+10 : 0.15984795896081297 : cranfield0650 :  some design problems of hovercraft .
+Top 10 results by TW2 Standard
+Rank : W2Score : DocId: Headline
+1 : 3.8432859049463914 : cranfield0488 :  a reaction-rate parameter for gasdynamics of a chemically reacting gas mixture .
+2 : 3.8419034262989076 : cranfield0166 :  flow of chemically reacting gas mixtures .
+3 : 3.7084260866298573 : cranfield1061 :  turbulent mixing of a rocket exhaust jet with a supersonic stream including chemical reactions .
+4 : 3.6476362815141106 : cranfield0167 :  linearized flow of a dissociating gas .
+5 : 3.6364591043128645 : cranfield0185 :  some possibilities of using gas mixtures other than in aerodynamic research .
+6 : 3.628732418439512 : cranfield1189 :  nonequilibrium flow past a wedge .
+7 : 3.60066635623051 : cranfield1374 :  theoretical analysis of turbulent mixing of reactive gases with application to supersonic combustion of hydrogen .
+8 : 3.555545965588595 : cranfield0575 :  atomic recombination in a hypersonic wind tunnel nozzle .
+9 : 3.516384600746262 : cranfield1011 :  free-flight measurements of the static and dynamic
+10 : 2.9819393099221343 : cranfield0650 :  some design problems of hovercraft .
+Query:what chemical kinetic system is applicable to hypersonic aerodynamic problems
+Indexed Query: chemic kinet system applic to hyperson aerodynam problem
+Top 10 results by TW1 Standard
+Rank : W1Score : DocId : Headline
+1 : 1.2708976967808558 : cranfield0401 :  inviscid hypersonic airflows with coupled non-equilibrium processes .
+2 : 1.224742658291385 : cranfield0103 :  theory of mixing and chemical reaction in the opposed jet diffusion flame .
+3 : 1.1522570258280203 : cranfield0552 :  chemical kinetics of high temperature air .
+4 : 1.1234039346481806 : cranfield0625 :  viscous and inviscid nonequilibrium gas flows .
+5 : 1.0628589401062105 : cranfield1296 :  non-equilibrium expansions of air with coupled chemical reactions .
+6 : 1.0574824921360881 : cranfield0163 :  an analysis of the corridor and guidance requirements for supercircular entry planetary atmospheres .
+7 : 1.0475795009449282 : cranfield1032 :  on the conservativeness of various distributed force systems .
+8 : 1.0172400076604438 : cranfield0968 :  rocket propulsion systems for interplanetary flight .
+9 : 1.012875977177191 : cranfield0943 :  compressible free shear layer with finite initial thickness .
+10 : 0.5575928087961776 : cranfield0650 :  some design problems of hovercraft .
+Top 10 results by TW2 Standard
+Rank : W2Score : DocId: Headline
+1 : 1.4224260221736902 : cranfield0103 :  theory of mixing and chemical reaction in the opposed jet diffusion flame .
+2 : 1.3680137624872033 : cranfield1032 :  on the conservativeness of various distributed force systems .
+3 : 1.3381449937629846 : cranfield0401 :  inviscid hypersonic airflows with coupled non-equilibrium processes .
+4 : 1.3249201226788685 : cranfield0552 :  chemical kinetics of high temperature air .
+5 : 1.3125258519803817 : cranfield1296 :  non-equilibrium expansions of air with coupled chemical reactions .
+6 : 1.312005061454585 : cranfield0968 :  rocket propulsion systems for interplanetary flight .
+7 : 1.3107389299645236 : cranfield0943 :  compressible free shear layer with finite initial thickness .
+8 : 1.2587872456446099 : cranfield0625 :  viscous and inviscid nonequilibrium gas flows .
+9 : 1.2548294307031822 : cranfield0355 :  the injection of air into the dissociated hypersonic laminar boundary layer .
+10 : 1.2075278414198165 : cranfield0650 :  some design problems of hovercraft .
+Query:what theoretical and experimental guides do we have as to turbulent couette flow behaviour
+Indexed Query: theoret experiment guid do we to turbul couett flow behaviour
+Top 10 results by TW1 Standard
+Rank : W1Score : DocId : Headline
+1 : 1.520905179712664 : cranfield0798 :  interaction between shock waves and boundary layers, with a note on the effects of the interaction of the performance of supersonic intakes .
+2 : 1.421924060350772 : cranfield0315 :  scale effects at high subsonic and transonic speeds and methods for fixing transition in model experiments .
+3 : 1.2841305860100434 : cranfield0491 :  on the close relationship between turbulent plane-couette and pressure flows .
+4 : 1.274388254629011 : cranfield0344 :  some experimental techniques in mass transfer cooling .
+5 : 1.254890154492079 : cranfield0640 :  the design of structures to resist jet noise fatigue .
+6 : 1.23313521816464 : cranfield0099 :  the fundamentals of the statistical theory of turbulence .
+7 : 1.221528008178946 : cranfield0257 :  on turbulen flow between parallel plates .
+8 : 1.183322919065783 : cranfield0522 :  laminar, transitional and turbulent heat transfer to a cone-cylinder-flare body at mach 8. 0.
+9 : 1.1803255946826154 : cranfield0294 :  an investigation of laminar transitional and turbulent heat transfer on blunt-nosed bodies in hypersonic flow .
+10 : 0.07919270569370326 : cranfield0650 :  some design problems of hovercraft .
+Top 10 results by TW2 Standard
+Rank : W2Score : DocId: Headline
+1 : 1.878841274464545 : cranfield0491 :  on the close relationship between turbulent plane-couette and pressure flows .
+2 : 1.7529068093639846 : cranfield0121 :  a theory for base pressures in transonic and supersonic flow .
+3 : 1.744274328598468 : cranfield0257 :  on turbulen flow between parallel plates .
+4 : 1.7393716822159562 : cranfield0315 :  scale effects at high subsonic and transonic speeds and methods for fixing transition in model experiments .
+5 : 1.7194341700873415 : cranfield0798 :  interaction between shock waves and boundary layers, with a note on the effects of the interaction of the performance of supersonic intakes .
+6 : 1.712464541621188 : cranfield0148 :  on displacement thickness .
+7 : 1.7066218169793086 : cranfield0142 :  the problem of aerodynamic heating .
+8 : 1.7065154253389467 : cranfield0406 :  on the behaviour of boundary layers at supersonic speeds .
+9 : 1.7050298673757636 : cranfield0472 :  waves in supersonic flow .
+10 : 1.4773278539330004 : cranfield0650 :  some design problems of hovercraft .
+Query:is it possible to relate the available pressure distributions for an ogive forebody at zero angle of attack to the lower surface pressures of an equivalent ogive forebody at angle of attack
+Indexed Query: possibl to relat avail pressur distribut ogiv forebodi at zero angl attack to lower surfac pressur equival ogiv forebodi at angl attack
+Top 10 results by TW1 Standard
+Rank : W1Score : DocId : Headline
+1 : 3.734895360724571 : cranfield0492 :  prediction of ogive-forebody pressures at angles of attack .
+2 : 3.082544742120485 : cranfield1040 :  on transverse vibrations of thin, shallow elastic shells .
+3 : 2.978088673029812 : cranfield0056 :  an analysis of the applicability of the hypersonic similarity law to the study of the flow about bodies of revolution at zero angle of attack .
+4 : 2.9738456754433824 : cranfield0057 :  applicability of the hypersonic similarity rule to pressure distributions which include the effects of rotation for bodies of revolution at zero angle of attack .
+5 : 2.908784449827136 : cranfield0434 :  contributions of the wing panels to the forces and moments of supersonic wing-body combinations at combined angles .
+6 : 2.8687300890489746 : cranfield0373 :  the generalized expansion method and its application to bodies travelling at high supersonic airspeeds .
+7 : 2.8653716326593064 : cranfield0124 :  a summary of the supersonic pressure drag of bodies of revolution .
+8 : 2.8463414157386744 : cranfield0232 :  accuracy of approximate methods for predicting pressure on pointed non-lifting bodies of revolution in supersonic flow .
+9 : 2.771117127176954 : cranfield0234 :  a second order shock-expansion method applicable to bodies of revolution near zero lift .
+10 : 0.7389299113720877 : cranfield0650 :  some design problems of hovercraft .
+Top 10 results by TW2 Standard
+Rank : W2Score : DocId: Headline
+1 : 4.490959678405232 : cranfield0492 :  prediction of ogive-forebody pressures at angles of attack .
+2 : 3.7009769104873285 : cranfield0057 :  applicability of the hypersonic similarity rule to pressure distributions which include the effects of rotation for bodies of revolution at zero angle of attack .
+3 : 3.6353220578460195 : cranfield0056 :  an analysis of the applicability of the hypersonic similarity law to the study of the flow about bodies of revolution at zero angle of attack .
+4 : 3.579299189549691 : cranfield0434 :  contributions of the wing panels to the forces and moments of supersonic wing-body combinations at combined angles .
+5 : 3.5658172590598354 : cranfield0232 :  accuracy of approximate methods for predicting pressure on pointed non-lifting bodies of revolution in supersonic flow .
+6 : 3.563029277292325 : cranfield0124 :  a summary of the supersonic pressure drag of bodies of revolution .
+7 : 3.4919768788870806 : cranfield0122 :  a simplified approximate method for the calculation of the pressure around conical bodies of arbitrary shape in supersonic and hypersonic flow .
+8 : 3.490431546739555 : cranfield1231 :  hypersonic flow over an elliptic cone: theory and experiment .
+9 : 3.4857422835611365 : cranfield1040 :  on transverse vibrations of thin, shallow elastic shells .
+10 : 2.9905229555064343 : cranfield0650 :  some design problems of hovercraft .
+Query:what methods -dash exact or approximate -dash are presently available for predicting body pressures at angle of attack
+Indexed Query: method -dash exact approxim -dash present avail predict bodi pressur at angl attack
+Top 10 results by TW1 Standard
+Rank : W1Score : DocId : Headline
+1 : 1.8781635771855902 : cranfield0688 :  tables of aerodynamic coefficients obtained from developed newtonian expressions for complete and partial conic and spheric bodies at combined angles of attack and sideslip with some comparisons with hypersonic experimental data .
+2 : 1.8245925730974748 : cranfield0122 :  a simplified approximate method for the calculation of the pressure around conical bodies of arbitrary shape in supersonic and hypersonic flow .
+3 : 1.7235864175261466 : cranfield0443 :  calculated and measured pressure distributions over the midspan section of the naca 4412 airfoil .
+4 : 1.655858410521716 : cranfield0234 :  a second order shock-expansion method applicable to bodies of revolution near zero lift .
+5 : 1.634116643925189 : cranfield0433 :  application of two dimensional vortex theory to the prediction of flow fields behind wings of wing-body combinations at subsonic and supersonic speeds .
+6 : 1.556223280520819 : cranfield1231 :  hypersonic flow over an elliptic cone: theory and experiment .
+7 : 1.5372625680474306 : cranfield0476 :  the blasius equation with three-point boundary conditions .
+8 : 1.5295308670300485 : cranfield0947 :  static aerodynamic characteristics of a short blunt 10 semi-vertex angle cone at a mach number of 15 in helium .
+9 : 1.5204478659811609 : cranfield0232 :  accuracy of approximate methods for predicting pressure on pointed non-lifting bodies of revolution in supersonic flow .
+10 : 0.2871799144224972 : cranfield0650 :  some design problems of hovercraft .
+Top 10 results by TW2 Standard
+Rank : W2Score : DocId: Headline
+1 : 2.1311345183189228 : cranfield0688 :  tables of aerodynamic coefficients obtained from developed newtonian expressions for complete and partial conic and spheric bodies at combined angles of attack and sideslip with some comparisons with hypersonic experimental data .
+2 : 2.122895067145255 : cranfield0122 :  a simplified approximate method for the calculation of the pressure around conical bodies of arbitrary shape in supersonic and hypersonic flow .
+3 : 2.112913812281373 : cranfield0492 :  prediction of ogive-forebody pressures at angles of attack .
+4 : 2.0466111889513656 : cranfield0443 :  calculated and measured pressure distributions over the midspan section of the naca 4412 airfoil .
+5 : 2.018454485635589 : cranfield0069 :  predicted shock envelopes about two types of vehicles at large angles of attack .
+6 : 2.0099304906467728 : cranfield1231 :  hypersonic flow over an elliptic cone: theory and experiment .
+7 : 1.9931793816200092 : cranfield1083 :  an investigation of fluid flow in two dimensions .
+8 : 1.9847714568722326 : cranfield0248 :  the application of lighthill formula for numerical calculation of pressure distributions on bodies of revolution at supersonic speed and zero angle of attack .
+9 : 1.9826935573847237 : cranfield0234 :  a second order shock-expansion method applicable to bodies of revolution near zero lift .
+10 : 1.614839896440359 : cranfield0650 :  some design problems of hovercraft .
+Query:papers on internal /slip flow/ heat transfer studies
+Indexed Query: paper on intern /slip flow/ heat transfer studi
+Top 10 results by TW1 Standard
+Rank : W1Score : DocId : Headline
+1 : 1.2827153037876717 : cranfield0045 :  an investigation of separated flows, part ii: flow in the cavity and heat transfer .
+2 : 1.115643077758896 : cranfield0270 :  on combined free and forced convection laminar magnetohydrodynamic flow and heat transfer in channels with transverse magnetic field .
+3 : 1.06034636309735 : cranfield0101 :  laminar heat transfer over blunt-nosed bodies at hypersonic flight speeds .
+4 : 1.043850056363396 : cranfield1147 :  heat transfer to bodies traveling at high speed in the upper atmosphere .
+5 : 1.037517120433606 : cranfield0077 :  a comparative analysis of the performance of long range hypervelocity vehicles .
+6 : 1.0355832124523239 : cranfield0123 :  the downstream influence of mass transfer at the nose of a slender cone .
+7 : 1.0255075533079887 : cranfield1268 :  stable combustion of a high-velocity gas in a heated boundary layer .
+8 : 1.0185618926524214 : cranfield0102 :  advantages and limitations of models .
+9 : 1.0008614566892358 : cranfield0329 :  various aerodynamic characteristics in hypersonic rarefied gas flow .
+10 : 0.21076296602659325 : cranfield0650 :  some design problems of hovercraft .
+Top 10 results by TW2 Standard
+Rank : W2Score : DocId: Headline
+1 : 1.6081671737436964 : cranfield0045 :  an investigation of separated flows, part ii: flow in the cavity and heat transfer .
+2 : 1.5287778772033827 : cranfield0102 :  advantages and limitations of models .
+3 : 1.4757371157356307 : cranfield0270 :  on combined free and forced convection laminar magnetohydrodynamic flow and heat transfer in channels with transverse magnetic field .
+4 : 1.454557227165124 : cranfield0398 :  heat transfer in turbulent shear flow .
+5 : 1.4432256137250847 : cranfield0549 :  experimental study of the velocity and temperature distribution in a high-velocity vortex-type flow .
+6 : 1.4393356726705122 : cranfield0983 :  addendum to 'heat transfer to satellite vehicles re-entering the atmosphere .
+7 : 1.4206064576071045 : cranfield0303 :  effect of variable heat recombination on stagnation point heat transfer .
+8 : 1.4164313186066364 : cranfield0123 :  the downstream influence of mass transfer at the nose of a slender cone .
+9 : 1.4154274164378735 : cranfield0005 :  one-dimensional transient heat conduction into a double-layer slab subjected to a linear heat input for a small time internal .
+10 : 1.2332255282982492 : cranfield0650 :  some design problems of hovercraft .
+Query:are real-gas transport properties for air available over a wide range of enthalpies and densities
+Indexed Query: real-ga transport properti air avail over wide rang enthalpi densiti
+Top 10 results by TW1 Standard
+Rank : W1Score : DocId : Headline
+1 : 1.9887773106785471 : cranfield0493 :  real-gas laminar boundary layer skin friction and heat transfer .
+2 : 1.818611665454563 : cranfield0302 :  approximations for the thermodynamic and transport properties of high temperature air .
+3 : 1.6339759519615973 : cranfield0949 :  charts for equilibrium flow properties of air in hypervelocity nozzles .
+4 : 1.5196748395749116 : cranfield0329 :  various aerodynamic characteristics in hypersonic rarefied gas flow .
+5 : 1.498634161928782 : cranfield1199 :  theoretical investigations of a supersonic laminar boundary layer with foreign-gas injection .
+6 : 1.4924759387877389 : cranfield0272 :  oscillatory aerodynamic coefficients for a unified supersonic hypersonic strip theory .
+7 : 1.4485868635629064 : cranfield1313 :  on the flow in a reflected shock tunnel .
+8 : 1.435509617935765 : cranfield1214 :  the drag of elongated bodies over a wide reynolds number range .
+9 : 1.430575256536268 : cranfield1264 :  boundary layer transition and heat transfer in shock tubes .
+10 : 0.22018935642553286 : cranfield0650 :  some design problems of hovercraft .
+Top 10 results by TW2 Standard
+Rank : W2Score : DocId: Headline
+1 : 2.288229685603162 : cranfield0302 :  approximations for the thermodynamic and transport properties of high temperature air .
+2 : 2.2653767155809024 : cranfield0493 :  real-gas laminar boundary layer skin friction and heat transfer .
+3 : 2.1907321819010135 : cranfield0949 :  charts for equilibrium flow properties of air in hypervelocity nozzles .
+4 : 2.0920946114622705 : cranfield0524 :  stagnation point heat transfer in partially ionized air .
+5 : 2.0522890441945574 : cranfield1010 :  free-flight measurements of the static and dynamic
+6 : 2.045582205843565 : cranfield0691 :  calculation procedure for thermodynamic transport, and flow properties of the combustion products of a hydrocarbon fuel mixture burned in air with results for ethylene-air and methane-air mixtures .
+7 : 2.0215564401001522 : cranfield0405 :  tables of thermal properties of gases .
+8 : 2.018578017057449 : cranfield0616 :  determination of upper-atmosphere air density and scale height from satellite observations .
+9 : 2.0152871842921387 : cranfield1199 :  theoretical investigations of a supersonic laminar boundary layer with foreign-gas injection .
+10 : 1.6836634789055627 : cranfield0650 :  some design problems of hovercraft .
+Query:is it possible to find an analytical   similar solution of the strong blast wave problem in the newtonian approximation
+Indexed Query: possibl to find analyt similar solut strong blast wave problem newtonian approxim
+Top 10 results by TW1 Standard
+Rank : W1Score : DocId : Headline
+1 : 2.165795634336923 : cranfield0495 :  on similar solutions for strong blast waves and their application to steady hypersonic flow .
+2 : 1.5702999403561646 : cranfield0072 :  boundary layer behind shock or thin expansion wave moving into stationary fluid .
+3 : 1.566706819847534 : cranfield0025 :  inviscid hypersonic flow over blunt-nosed slender bodies .
+4 : 1.5163356632272775 : cranfield0556 :  numerical comparison between exact and approximate theories of hypersonic inviscid flow past slender blunt nosed bodies .
+5 : 1.4849460987647198 : cranfield1356 :  secondary flow fields embedded in hypersonic shock layers .
+6 : 1.4392107035279356 : cranfield1280 :  wings with minimum drag due to lift in supersonic flow .
+7 : 1.4353177431144204 : cranfield1248 :  an analytic extension of the shock-expansion method .
+8 : 1.4325547335643656 : cranfield1310 :  survey of inviscid hypersonic flow theory for geometrically slender shapes .
+9 : 1.4246574990144398 : cranfield0262 :  the formation of a blast wave by a very intense explosion .
+10 : 0.3597600120814492 : cranfield0650 :  some design problems of hovercraft .
+Top 10 results by TW2 Standard
+Rank : W2Score : DocId: Headline
+1 : 2.428761469943481 : cranfield0495 :  on similar solutions for strong blast waves and their application to steady hypersonic flow .
+2 : 2.0295408730790885 : cranfield0556 :  numerical comparison between exact and approximate theories of hypersonic inviscid flow past slender blunt nosed bodies .
+3 : 2.006457853798286 : cranfield0654 :  on the propagation and structure of the blast wave .  part 1.
+4 : 1.999351103739905 : cranfield0472 :  waves in supersonic flow .
+5 : 1.9841892741927731 : cranfield0072 :  boundary layer behind shock or thin expansion wave moving into stationary fluid .
+6 : 1.9654482472504802 : cranfield1186 :  lift of slender delta wings according to newtonian theory .
+7 : 1.9649085645843851 : cranfield1327 :  on the propagation and structure of the blast wave .
+8 : 1.9509934191112062 : cranfield0028 :  a note on the explosion solution of sedov with application to the newtonian theory of unsteady hypersonic flow .
+9 : 1.9405257199846058 : cranfield0305 :  hypersonic strong viscous interaction on a flat plate with surface mass transfer .
+10 : 1.6927157989159303 : cranfield0650 :  some design problems of hovercraft .
+Query:how can the aerodynamic performance of channel flow ground effect machines be calculated
+Indexed Query: can aerodynam perform channel flow ground effect machin calcul
+Top 10 results by TW1 Standard
+Rank : W1Score : DocId : Headline
+1 : 1.349282288742145 : cranfield0624 :  cruise performance of channel-flow ground effect machines .
+2 : 1.3040532329198073 : cranfield0966 :  on fully developed channel flows,. some solutions and limitations, and effects of compressibility, variable properties, and body forces .
+3 : 1.248909567904589 : cranfield0704 :  a systematic kernel function procedure for determining aerodynamic forces on oscillating or steady finite wings at subsonic speeds .
+4 : 1.1584829994238732 : cranfield0329 :  various aerodynamic characteristics in hypersonic rarefied gas flow .
+5 : 1.1479193472192137 : cranfield0792 :  some low speed problems of high speed aircraft .
+6 : 1.1151578112782528 : cranfield1164 :  effect of ground proximity on the aerodynamic characteristics of a four- engined vertical take-off and landing transport airplane model with tilting wing and propellers .
+7 : 1.0828975014965052 : cranfield1209 :  aerodynamic processes in the downwash-impingement problem .
+8 : 1.073327472733932 : cranfield0325 :  heat transfer to constant property laminar boundary layer flows with power function free stream velocity and wall temperature variation .
+9 : 1.067635541764262 : cranfield0270 :  on combined free and forced convection laminar magnetohydrodynamic flow and heat transfer in channels with transverse magnetic field .
+10 : 0.87037406568315 : cranfield0650 :  some design problems of hovercraft .
+Top 10 results by TW2 Standard
+Rank : W2Score : DocId: Headline
+1 : 1.5844983324959652 : cranfield0624 :  cruise performance of channel-flow ground effect machines .
+2 : 1.5524882183938387 : cranfield0966 :  on fully developed channel flows,. some solutions and limitations, and effects of compressibility, variable properties, and body forces .
+3 : 1.5332844975826598 : cranfield0650 :  some design problems of hovercraft .
+4 : 1.479826262731271 : cranfield1221 :  steady flow of conducting fluids in channels under transverse magnetic fields, with consideration of hall effect .
+5 : 1.4774404302240123 : cranfield0704 :  a systematic kernel function procedure for determining aerodynamic forces on oscillating or steady finite wings at subsonic speeds .
+6 : 1.4752382583911468 : cranfield0941 :  viscous compressible and incompressible flow in slender channels .
+7 : 1.4542903548568422 : cranfield1232 :  the curtain jet .
+8 : 1.4444878477819065 : cranfield1164 :  effect of ground proximity on the aerodynamic characteristics of a four- engined vertical take-off and landing transport airplane model with tilting wing and propellers .
+9 : 1.4407303764659856 : cranfield0543 :  the stacking of compressor stage characteristics to give an overall compressor performance map .
+10 : 1.4379207382460872 : cranfield1223 :  inviscid-incompressible-flow theory of static two-dimensional solid jets, in proximity to the ground .
+Query:what is the basic mechanism of the transonic aileron buzz
+Indexed Query: basic mechan transon aileron buzz
+Top 10 results by TW1 Standard
+Rank : W1Score : DocId : Headline
+1 : 1.9497329430111965 : cranfield0496 :  a theory of transonic aileron buzz, neglecting viscous effects .
+2 : 1.351289743326753 : cranfield0903 :  two dimensional transonic unsteady flow with shock waves .
+3 : 1.2393172324446575 : cranfield0520 :  wing-tail interference as a cause of 'magnus' effects on a finned missile .
+4 : 1.1777580956320797 : cranfield0199 :  measurement of two dimensional derivatives on a wing-aileron-tab system .
+5 : 1.0493251129503938 : cranfield0797 :  a study of the effect of leading-edge modifications on the flow over a 50degree sweptback wing at transonic speeds .
+6 : 1.0390236150905587 : cranfield1268 :  stable combustion of a high-velocity gas in a heated boundary layer .
+7 : 1.0284190958803596 : cranfield0643 :  an investigation of wing-aileron flutter using ground launched rocket models .
+8 : 1.0089781601486734 : cranfield0660 :  the fundamental solution for small steady three dimensional disturbances to a two dimensional parallel shear flow .
+9 : 0.9660445011059755 : cranfield0927 :  investigation of normal force distributions and wake vortex characteristics of bodies of revolution at supersonic speeds .
+10 : 0.06592380646301876 : cranfield0650 :  some design problems of hovercraft .
+Top 10 results by TW2 Standard
+Rank : W2Score : DocId: Headline
+1 : 2.0071981611185903 : cranfield0496 :  a theory of transonic aileron buzz, neglecting viscous effects .
+2 : 1.6270211172049236 : cranfield0903 :  two dimensional transonic unsteady flow with shock waves .
+3 : 1.578849130188107 : cranfield0520 :  wing-tail interference as a cause of 'magnus' effects on a finned missile .
+4 : 1.525182744198195 : cranfield0643 :  an investigation of wing-aileron flutter using ground launched rocket models .
+5 : 1.5250473714099577 : cranfield0313 :  on alternative forms for the basic equations of transonic flow theory .
+6 : 1.5066988631519163 : cranfield0038 :  on the prediction of mixed subsonic/supersonic pressure distributions .
+7 : 1.500587995957979 : cranfield0199 :  measurement of two dimensional derivatives on a wing-aileron-tab system .
+8 : 1.4975350744179448 : cranfield0440 :  compilation of information on the transonic attachment of flows at the leading edge of airfoils .
+9 : 1.477368266834441 : cranfield0880 :  the design and testing of supersonic flutter models .
+10 : 1.2297985612688782 : cranfield0650 :  some design problems of hovercraft .
+Query:papers on shock-sound wave interaction
+Indexed Query: paper on shock-sound wave interact
+Top 10 results by TW1 Standard
+Rank : W1Score : DocId : Headline
+1 : 0.7338257904692569 : cranfield0798 :  interaction between shock waves and boundary layers, with a note on the effects of the interaction of the performance of supersonic intakes .
+2 : 0.6713362548358175 : cranfield0170 :  the interaction of a reflected shock wave with the boundary layer in a shock tube .
+3 : 0.6019224972665207 : cranfield0345 :  the interaction of shock waves with boundary layer on a flat surface .
+4 : 0.5979140552087814 : cranfield0256 :  an experimental study of the glancing interaction between a shock wave and a turbulent boundary layer .
+5 : 0.5866944942951706 : cranfield0439 :  a factor affecting transonic leading edge flow separation .
+6 : 0.5827173628418604 : cranfield1364 :  an experimental investigation of the interaction between shock waves and  boundary layers .
+7 : 0.545448340185964 : cranfield0569 :  an experimental investigation of leading edge shock wave boundary layer interaction at mach 5.8 .
+8 : 0.5321847518770133 : cranfield0335 :  the interaction between boundary layer and shock waves in transonic flow .
+9 : 0.5168530999954916 : cranfield0291 :  sweepback effects in the turbulent boundary-layer shock-wave interaction .
+10 : 0.32884054066007584 : cranfield0650 :  some design problems of hovercraft .
+Top 10 results by TW2 Standard
+Rank : W2Score : DocId: Headline
+1 : 0.6442348378151987 : cranfield0170 :  the interaction of a reflected shock wave with the boundary layer in a shock tube .
+2 : 0.6263394062646336 : cranfield0798 :  interaction between shock waves and boundary layers, with a note on the effects of the interaction of the performance of supersonic intakes .
+3 : 0.6204493914720812 : cranfield0256 :  an experimental study of the glancing interaction between a shock wave and a turbulent boundary layer .
+4 : 0.6103837841407529 : cranfield0439 :  a factor affecting transonic leading edge flow separation .
+5 : 0.6047937112175231 : cranfield0335 :  the interaction between boundary layer and shock waves in transonic flow .
+6 : 0.5999517464166316 : cranfield0345 :  the interaction of shock waves with boundary layer on a flat surface .
+7 : 0.5976594408079693 : cranfield1364 :  an experimental investigation of the interaction between shock waves and  boundary layers .
+8 : 0.5831614233902886 : cranfield0291 :  sweepback effects in the turbulent boundary-layer shock-wave interaction .
+9 : 0.5816181759398613 : cranfield0064 :  unsteady oblique interaction of a shock wave with plane disturbances .
+10 : 0.505256607542863 : cranfield0650 :  some design problems of hovercraft .
+Query:material properties of photoelastic materials
+Indexed Query: materi properti photoelast materi
+Top 10 results by TW1 Standard
+Rank : W1Score : DocId : Headline
+1 : 1.4560228780259048 : cranfield0462 :  photo-thermoelasticity .
+2 : 1.1347882131528755 : cranfield1025 :  note on creep buckling of columns .
+3 : 1.0820186537547454 : cranfield0463 :  physical properties of plastics for photo-thermoelastic investigation .
+4 : 1.0802696387223685 : cranfield1097 :  experimental ablation cooling .
+5 : 1.0754223809656773 : cranfield0082 :  theoretical investigation of the ablation of a glass-type heat protection shield of varied material properties at the stagnation point of a re-entering irbm .
+6 : 0.9968658019071339 : cranfield0542 :  biot's variational principle in heat conduction .
+7 : 0.99494619793458 : cranfield1043 :  on transverse vibrations of thin, shallow elastic shells .
+8 : 0.958365592490396 : cranfield0553 :  ablation of glassy materials around blunt bodies of revolution .
+9 : 0.9439998667963494 : cranfield1065 :  a free-flight investigation of ablation of a blunt body to a mach number of 13 .1.
+10 : 0.0465313107946849 : cranfield0650 :  some design problems of hovercraft .
+Top 10 results by TW2 Standard
+Rank : W2Score : DocId: Headline
+1 : 1.5036676508544857 : cranfield0462 :  photo-thermoelasticity .
+2 : 1.289480859617348 : cranfield0463 :  physical properties of plastics for photo-thermoelastic investigation .
+3 : 1.2876454560215953 : cranfield1025 :  note on creep buckling of columns .
+4 : 1.2723242957125451 : cranfield1099 :  a theoretical study of stagnation point ablation .
+5 : 1.228993135947185 : cranfield1097 :  experimental ablation cooling .
+6 : 1.228516549864426 : cranfield1340 :  method of controlling stiffness properties of a solid-construction model wing .
+7 : 1.2190603932644442 : cranfield1043 :  on transverse vibrations of thin, shallow elastic shells .
+8 : 1.2168386673879636 : cranfield0761 :  buckling of sandwich under normal pressure .
+9 : 1.2156198641308196 : cranfield0082 :  theoretical investigation of the ablation of a glass-type heat protection shield of varied material properties at the stagnation point of a re-entering irbm .
+10 : 0.8680345104368253 : cranfield0650 :  some design problems of hovercraft .
+Query:can the transverse potential flow about a body of revolution be calculated efficiently by an electronic computer
+Indexed Query: can transvers potenti flow about bodi revolut calcul effici by electron comput
+Top 10 results by TW1 Standard
+Rank : W1Score : DocId : Headline
+1 : 1.947536587236436 : cranfield0498 :  calculation of potential flow about bodies of revolution having axes perpendicular to the free-stream direction .
+2 : 1.6370409450845786 : cranfield1255 :  the flow about a charged body moving in the lower atmosphere .
+3 : 1.5340327729797636 : cranfield0927 :  investigation of normal force distributions and wake vortex characteristics of bodies of revolution at supersonic speeds .
+4 : 1.5037289019127718 : cranfield1328 :  the production of aerodynamic forces by heat addition on external surfaces of aircraft .
+5 : 1.4462058896672887 : cranfield0976 :  turbulent diffusion in the wake of a blunt nosed body at hypersonic speeds .
+6 : 1.425291597763025 : cranfield0266 :  exact solution of the neumann problem . calculation for non- circulatory plane and axially symmetric flows about or within arbitrary boundaries .
+7 : 1.394952828088962 : cranfield0869 :  the calculation of transient temperature in turbine blades and tapered discs using biot's variational method .
+8 : 1.3491270784293043 : cranfield0231 :  practical calculation of second-order supersonic flow past non-lifting bodies of revolution .
+9 : 1.3439548130883399 : cranfield0106 :  the transverse potential flow past a body of revolution .
+10 : 0.07796282001251431 : cranfield0650 :  some design problems of hovercraft .
+Top 10 results by TW2 Standard
+Rank : W2Score : DocId: Headline
+1 : 2.2184270100729995 : cranfield0498 :  calculation of potential flow about bodies of revolution having axes perpendicular to the free-stream direction .
+2 : 2.0065824663381795 : cranfield1255 :  the flow about a charged body moving in the lower atmosphere .
+3 : 1.989437457487023 : cranfield0106 :  the transverse potential flow past a body of revolution .
+4 : 1.9329629496769118 : cranfield0231 :  practical calculation of second-order supersonic flow past non-lifting bodies of revolution .
+5 : 1.9004931703315713 : cranfield1328 :  the production of aerodynamic forces by heat addition on external surfaces of aircraft .
+6 : 1.8490006347082886 : cranfield0248 :  the application of lighthill formula for numerical calculation of pressure distributions on bodies of revolution at supersonic speed and zero angle of attack .
+7 : 1.8415352045452735 : cranfield0410 :  the supersonic flow about a blunt body of revolution for gases at chemical equilibrium .
+8 : 1.833691378147074 : cranfield0266 :  exact solution of the neumann problem . calculation for non- circulatory plane and axially symmetric flows about or within arbitrary boundaries .
+9 : 1.8323445388745 : cranfield0494 :  axisymmetric viscous flow plast very slender bodies of revolution .
+10 : 1.454384524013181 : cranfield0650 :  some design problems of hovercraft .
+Query:can the three-dimensional problem of a transverse potential flow about a body of revolution be reduced to a two-dimensional problem
+Indexed Query: can three-dimension problem transvers potenti flow about bodi revolut reduc to two-dimension problem
+Top 10 results by TW1 Standard
+Rank : W1Score : DocId : Headline
+1 : 1.799008550219201 : cranfield1108 :  a study of second-order supersonic flow theory .
+2 : 1.5468749927638288 : cranfield1281 :  turbulent heat transfer on blunt-nosed bodies in two-dimensional and general three-dimensional hypersonic flow .
+3 : 1.4791852643177357 : cranfield1301 :  compressible boundary layers on bodies of revolution .
+4 : 1.4720146563633614 : cranfield0094 :  the transverse curvature effect in compressible axially symmetric laminar boundary layer flow .
+5 : 1.4687337582035556 : cranfield0498 :  calculation of potential flow about bodies of revolution having axes perpendicular to the free-stream direction .
+6 : 1.435167989366082 : cranfield0373 :  the generalized expansion method and its application to bodies travelling at high supersonic airspeeds .
+7 : 1.434006324250264 : cranfield1201 :  a study of slender shapes of minimum drag using the newton-busemann pressure coefficient law .
+8 : 1.4289102704907566 : cranfield0410 :  the supersonic flow about a blunt body of revolution for gases at chemical equilibrium .
+9 : 1.4251237348002088 : cranfield0927 :  investigation of normal force distributions and wake vortex characteristics of bodies of revolution at supersonic speeds .
+10 : 0.30307991582595684 : cranfield0650 :  some design problems of hovercraft .
+Top 10 results by TW2 Standard
+Rank : W2Score : DocId: Headline
+1 : 1.9895848435130579 : cranfield1108 :  a study of second-order supersonic flow theory .
+2 : 1.9050921421130336 : cranfield0106 :  the transverse potential flow past a body of revolution .
+3 : 1.8814392523329417 : cranfield0336 :  simplified laminar boundary layer calculations for bodies of revolution and for yawed wings .
+4 : 1.8624972266073163 : cranfield0498 :  calculation of potential flow about bodies of revolution having axes perpendicular to the free-stream direction .
+5 : 1.8616068369660779 : cranfield0700 :  two and three-dimensional unsteady lift problems in high speed flight .
+6 : 1.8521401857372446 : cranfield0445 :  on the application of mathieu functions in the theory of subsonic compressible flow past oscillating airfoils .
+7 : 1.8511461464637795 : cranfield1301 :  compressible boundary layers on bodies of revolution .
+8 : 1.8489881571861346 : cranfield1281 :  turbulent heat transfer on blunt-nosed bodies in two-dimensional and general three-dimensional hypersonic flow .
+9 : 1.8282088285979021 : cranfield0410 :  the supersonic flow about a blunt body of revolution for gases at chemical equilibrium .
+10 : 1.4781810074511819 : cranfield0650 :  some design problems of hovercraft .
+Query:are experimental pressure distributions on bodies of revolution at angle of attack available
+Indexed Query: experiment pressur distribut on bodi revolut at angl attack avail
+Top 10 results by TW1 Standard
+Rank : W1Score : DocId : Headline
+1 : 1.3195938114166297 : cranfield0248 :  the application of lighthill formula for numerical calculation of pressure distributions on bodies of revolution at supersonic speed and zero angle of attack .
+2 : 1.2989786856772059 : cranfield0197 :  pressure distributions on three bodies of revolution to determine the effect of reynolds number up to and including the transonic speed range .
+3 : 1.2656053888735819 : cranfield0927 :  investigation of normal force distributions and wake vortex characteristics of bodies of revolution at supersonic speeds .
+4 : 1.257716357485296 : cranfield0234 :  a second order shock-expansion method applicable to bodies of revolution near zero lift .
+5 : 1.2031849211184777 : cranfield0498 :  calculation of potential flow about bodies of revolution having axes perpendicular to the free-stream direction .
+6 : 1.1998544497646937 : cranfield0056 :  an analysis of the applicability of the hypersonic similarity law to the study of the flow about bodies of revolution at zero angle of attack .
+7 : 1.1279661336221483 : cranfield1352 :  aerodynamic investigation of a parabolic body of revolution at mach number of 1. 92 and some effects of an annular supersonic jet exhausting from the base .
+8 : 1.1245854003378255 : cranfield0122 :  a simplified approximate method for the calculation of the pressure around conical bodies of arbitrary shape in supersonic and hypersonic flow .
+9 : 1.095583807170776 : cranfield1231 :  hypersonic flow over an elliptic cone: theory and experiment .
+10 : 0.24981838914494645 : cranfield0650 :  some design problems of hovercraft .
+Top 10 results by TW2 Standard
+Rank : W2Score : DocId: Headline
+1 : 1.3485915935865922 : cranfield0197 :  pressure distributions on three bodies of revolution to determine the effect of reynolds number up to and including the transonic speed range .
+2 : 1.3430698818692766 : cranfield0248 :  the application of lighthill formula for numerical calculation of pressure distributions on bodies of revolution at supersonic speed and zero angle of attack .
+3 : 1.3159870690384248 : cranfield0498 :  calculation of potential flow about bodies of revolution having axes perpendicular to the free-stream direction .
+4 : 1.2859079205199972 : cranfield0234 :  a second order shock-expansion method applicable to bodies of revolution near zero lift .
+5 : 1.2626433365090426 : cranfield0056 :  an analysis of the applicability of the hypersonic similarity law to the study of the flow about bodies of revolution at zero angle of attack .
+6 : 1.2541347585512623 : cranfield0492 :  prediction of ogive-forebody pressures at angles of attack .
+7 : 1.2453559603571998 : cranfield1352 :  aerodynamic investigation of a parabolic body of revolution at mach number of 1. 92 and some effects of an annular supersonic jet exhausting from the base .
+8 : 1.2427606549889885 : cranfield1231 :  hypersonic flow over an elliptic cone: theory and experiment .
+9 : 1.2395682413909073 : cranfield0927 :  investigation of normal force distributions and wake vortex characteristics of bodies of revolution at supersonic speeds .
+10 : 0.9178663371402337 : cranfield0650 :  some design problems of hovercraft .
+Query:does there exist a good basic treatment of the dynamics of re-entry combining consideration of realistic effects with relative simplicity of results
+Indexed Query: doe exist good basic treatment dynam re-entri combin consider realist effect rel simplic result
+Top 10 results by TW1 Standard
+Rank : W1Score : DocId : Headline
+1 : 2.045722232034959 : cranfield0082 :  theoretical investigation of the ablation of a glass-type heat protection shield of varied material properties at the stagnation point of a re-entering irbm .
+2 : 1.9475930344014836 : cranfield0140 :  the determination of turbulent skin friction by means of pitot tubes .
+3 : 1.8266366841061785 : cranfield1239 :  body under lifting wing .
+4 : 1.8055734263615064 : cranfield0927 :  investigation of normal force distributions and wake vortex characteristics of bodies of revolution at supersonic speeds .
+5 : 1.7998778943373248 : cranfield0344 :  some experimental techniques in mass transfer cooling .
+6 : 1.791864678481113 : cranfield0673 :  investigation of full scale split trailing edge wing flaps with various chords and hinge locations .
+7 : 1.7872240668885462 : cranfield0433 :  application of two dimensional vortex theory to the prediction of flow fields behind wings of wing-body combinations at subsonic and supersonic speeds .
+8 : 1.7854409243705243 : cranfield0225 :  elliptic cones alone and with wings at supersonic speeds .
+9 : 1.7766920932275236 : cranfield0193 :  a study of inviscid flow about air foils at high supersonic speeds .
+10 : 0.4211473270607235 : cranfield0650 :  some design problems of hovercraft .
+Top 10 results by TW2 Standard
+Rank : W2Score : DocId: Headline
+1 : 2.7159265528844254 : cranfield0082 :  theoretical investigation of the ablation of a glass-type heat protection shield of varied material properties at the stagnation point of a re-entering irbm .
+2 : 2.708518473246466 : cranfield0706 :  on som reciprocal relations in the theory of nonstationary flows .
+3 : 2.6539520316817673 : cranfield1052 :  recent advances in the buckling of thin shells .
+4 : 2.6406527346357587 : cranfield0140 :  the determination of turbulent skin friction by means of pitot tubes .
+5 : 2.6363378375744966 : cranfield0842 :  an improvement on donnell's approximation for thin-walled circular cylinders .
+6 : 2.6177075006645736 : cranfield0453 :  the influence of two-dimensional stream shear on airfoil maximum lift .
+7 : 2.614023414802611 : cranfield0987 :  a general theory of three dimensional flow in subsonic and supersonic turbo-machines of axial-radial-and mixed-flow types .
+8 : 2.6071389132455134 : cranfield0716 :  study of the oscillatory motion of manned vehicles entering the earth's atmosphere .
+9 : 2.6058334724242807 : cranfield1279 :  sublimation in a hypersonic environment .
+10 : 2.459388238170177 : cranfield0650 :  some design problems of hovercraft .
+Query:has anyone formally determined the influence of joule heating   produced by the induced current   in magnetohydrodynamic free convection flows under general conditions
+Indexed Query: ha anyon formal determin influenc joul heat produc by induc current magnetohydrodynam free convect flow under gener condit
+Top 10 results by TW1 Standard
+Rank : W1Score : DocId : Headline
+1 : 2.4397315450515644 : cranfield0270 :  on combined free and forced convection laminar magnetohydrodynamic flow and heat transfer in channels with transverse magnetic field .
+2 : 2.4188940693845393 : cranfield0500 :  joule heating in magnetohydrodynamic free-convection flows .
+3 : 2.0425552596622403 : cranfield0329 :  various aerodynamic characteristics in hypersonic rarefied gas flow .
+4 : 2.0301003681877 : cranfield0077 :  a comparative analysis of the performance of long range hypervelocity vehicles .
+5 : 2.0226069189045783 : cranfield0625 :  viscous and inviscid nonequilibrium gas flows .
+6 : 2.009664032648577 : cranfield0044 :  tip-bluntness effects on cone pressures at m=6.85.
+7 : 2.004542211981184 : cranfield0244 :  an improved smoke generator for use in the visualisation of airflow, particularly boundary layer flow at high reynolds numbers .
+8 : 2.003170091064427 : cranfield1201 :  a study of slender shapes of minimum drag using the newton-busemann pressure coefficient law .
+9 : 2.0024388517239826 : cranfield0798 :  interaction between shock waves and boundary layers, with a note on the effects of the interaction of the performance of supersonic intakes .
+10 : 0.3486383547533968 : cranfield0650 :  some design problems of hovercraft .
+Top 10 results by TW2 Standard
+Rank : W2Score : DocId: Headline
+1 : 3.3778112878072495 : cranfield0500 :  joule heating in magnetohydrodynamic free-convection flows .
+2 : 3.2208711012912272 : cranfield0270 :  on combined free and forced convection laminar magnetohydrodynamic flow and heat transfer in channels with transverse magnetic field .
+3 : 3.001744967940647 : cranfield0087 :  free-convection magnetohydrodynamic flow past a porous flat plate .
+4 : 2.9934068315210864 : cranfield0450 :  some physical interpretations of magnetohydrodynamic duct flows .
+5 : 2.9816029779157307 : cranfield0268 :  several magnetohydrodynamic free-convection solutions .
+6 : 2.96729385735552 : cranfield0267 :  steady and transient free convection of an electrically conducting fluid from a vertical plate in the presence of a magnetic field .
+7 : 2.960945916356519 : cranfield0407 :  stationary convection flow of an electrically conducting liquid between parallel plates in a magnetic field .
+8 : 2.95523255140951 : cranfield0088 :  magnetohydrodynamic free-convection pipe flow .
+9 : 2.93525101319166 : cranfield0584 :  conduction of heat in a solid with a power law of heat transfer at its surface .
+10 : 2.6407873525320777 : cranfield0650 :  some design problems of hovercraft .
+Please Enter Query(Press 0 to quit):
+viscous
+********** USER QURIES **********
+Query:viscous
+Indexed Query: viscou
+Top 10 results by TW1 Standard
+Rank : W1Score : DocId : Headline
+1 : 0.32136309231913973 : cranfield0305 :  hypersonic strong viscous interaction on a flat plate with surface mass transfer .
+2 : 0.3118776227574647 : cranfield0444 :  an approach to the flutter problem in real fluids .
+3 : 0.3048496811686812 : cranfield0329 :  various aerodynamic characteristics in hypersonic rarefied gas flow .
+4 : 0.29804804838021437 : cranfield0298 :  incompressible wedge flows of an electrically conducting viscous fluid in the presence of a magnetic field .
+5 : 0.2859131291711554 : cranfield0573 :  viscous hypersonic similitude .
+6 : 0.2794425521197159 : cranfield0310 :  hypersonic viscous flow over a flat plate
+7 : 0.2760554780297916 : cranfield0540 :  use of local similarity concepts in hypersonic viscous interaction problems .
+8 : 0.2712635436921003 : cranfield0208 :  the hall effect in the viscous flow of ionized gas between parallel plates under transverse magnetic field .
+9 : 0.2636736137729089 : cranfield0117 :  the motion of a viscous liquid past a paraboloid .
+10 : 0.007097516591589638 : cranfield0650 :  some design problems of hovercraft .
+Top 10 results by TW2 Standard
+Rank : W2Score : DocId: Headline
+1 : 0.27574382783418494 : cranfield0305 :  hypersonic strong viscous interaction on a flat plate with surface mass transfer .
+2 : 0.2742635439690141 : cranfield0310 :  hypersonic viscous flow over a flat plate
+3 : 0.2666026942047014 : cranfield0444 :  an approach to the flutter problem in real fluids .
+4 : 0.26581075651985103 : cranfield0573 :  viscous hypersonic similitude .
+5 : 0.2621998207519186 : cranfield0298 :  incompressible wedge flows of an electrically conducting viscous fluid in the presence of a magnetic field .
+6 : 0.2608512837496769 : cranfield0208 :  the hall effect in the viscous flow of ionized gas between parallel plates under transverse magnetic field .
+7 : 0.2595713429441496 : cranfield0153 :  on the steady motion of viscous, incompressible fluids, with particular reference to a variation principle .
+8 : 0.25847715995723963 : cranfield1311 :  some simple solutions to the problem of predicting boundary layer self-induced pressures .
+9 : 0.2571061428941087 : cranfield0540 :  use of local similarity concepts in hypersonic viscous interaction problems .
+10 : 0.13240309019193786 : cranfield0650 :  some design problems of hovercraft .
+Query Executed successfully!!
+Please Enter Query(Press 0 to quit):
+0
+
+Total time taken to execute the program in ms : 37161
+
