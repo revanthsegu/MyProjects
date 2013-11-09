@@ -1,0 +1,6 @@
+The uai directory contains the networks.
+The evid directory contains the evidence files. All the evidence files are empty. I have already incorporated the evidence in the uai files. Thus, the UAI files actually give you an evidence instantiated network.
+The output directory contains the exact answers.
+	The output files have some debugging information which you can safely ignore. The exact answers are given between the two RESULT lines.
+
+ 

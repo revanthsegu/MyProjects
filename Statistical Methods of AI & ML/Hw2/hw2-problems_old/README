@@ -1,0 +1,6 @@
+The file with extension .uai is the Bayesian or Markov network file.
+
+The file with extension .uai.evid is the evidence file
+
+The value of probability of evidence or the partition function is given in the corresponding file with extension .uai.PR
+
