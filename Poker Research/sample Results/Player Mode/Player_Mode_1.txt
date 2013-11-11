@@ -1,0 +1,149 @@
+E:\>java GetWinChance
+Started Executing the Winning Chance of a player in Poker table
+Please enter number of players in the table:
+9
+Please Enter First card:
+a s
+Please Enter Second card:
+k c
+Complete Percentage:
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90%
+You Have : High Card
+Win%(including split pot):                              20.288%
+Possible hands and their win percentages for you are
+Royal Flush    (0.0050%):            Win%(100.0%)               Split Pot%(0.0%)
+Straight Flush (0.0080%):            Win%(62.5%)                Split Pot%(25.0%)
+Four of a Kind (0.116%):             Win%(80.172%)              Split Pot%(19.828%)
+Full House     (2.201%):             Win%(62.79%)               Split Pot%(22.217%)
+Flush          (2.049%):             Win%(75.305%)              Split Pot%(0.293%)
+Straight       (3.352%):             Win%(47.047%)              Split Pot%(18.556%)
+Three of a Kind(4.388%):             Win%(45.283%)              Split Pot%(1.253%)
+Two Pair       (22.639%):            Win%(27.501%)              Split Pot%(1.886%)
+One pair       (45.751%):            Win%(12.061%)              Split Pot%(0.713%)
+High Card      (19.491%):            Win%(0.0050%)              Split Pot%(0.0050%)
+
+
+Possible hands might lost to are:
+
+Royal Flush    : 0.013%
+Straight Flush : 0.244%
+Four of a Kind : 1.172%
+Full House     : 12.13%
+Flush          : 11.044%
+Straight       : 19.015%
+Three of a Kind: 14.707%
+Two Pair       : 17.861%
+One pair       : 3.526%
+
+Time taken to play 100000 poker games with 9 players (ms):2751.0
+Please enter number of players folded(0-8):
+2
+Complete Percentage:
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90%
+You Have : High Card
+Win%(including split pot):                              25.447%
+Possible hands and their win percentages for you are
+Royal Flush    (0.0030%):            Win%(100.0%)               Split Pot%(0.0%)
+Straight Flush (0.0080%):            Win%(75.0%)                Split Pot%(25.0%)
+Four of a Kind (0.132%):             Win%(87.121%)              Split Pot%(12.879%)
+Full House     (2.234%):             Win%(71.576%)              Split Pot%(18.174%)
+Flush          (1.896%):             Win%(78.428%)              Split Pot%(1.002%)
+Straight       (3.176%):             Win%(52.771%)              Split Pot%(19.301%)
+Three of a Kind(4.436%):             Win%(49.617%)              Split Pot%(1.014%)
+Two Pair       (22.862%):            Win%(37.613%)              Split Pot%(2.248%)
+One pair       (45.828%):            Win%(16.998%)              Split Pot%(0.742%)
+High Card      (19.425%):            Win%(0.072%)               Split Pot%(0.0050%)
+
+
+Possible hands might lost to are:
+
+Royal Flush    : 0.0080%
+Straight Flush : 0.183%
+Four of a Kind : 0.876%
+Full House     : 9.927%
+Flush          : 9.162%
+Straight       : 16.348%
+Three of a Kind: 12.834%
+Two Pair       : 20.043%
+One pair       : 5.172%
+
+Time taken to play 100000 poker games with 9 players (ms):1908.0
+Please enter number of players folded(0-6):
+0
+Please Enter First card in River:
+a c
+Please Enter Second card in river:
+10 d
+Please Enter Third card in river:
+3 s
+Complete Percentage:
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90%
+You Have : One pair
+Win%(including split pot):                              49.425%
+Possible hands and their win percentages for you are
+Four of a Kind (0.096%):             Win%(100.0%)               Split Pot%(0.0%)
+Full House     (2.575%):             Win%(74.058%)              Split Pot%(18.563%)
+Straight       (1.465%):             Win%(37.406%)              Split Pot%(58.498%)
+Three of a Kind(6.525%):             Win%(81.226%)              Split Pot%(1.333%)
+Two Pair       (37.61%):             Win%(48.072%)              Split Pot%(1.784%)
+One pair       (51.729%):            Win%(39.556%)              Split Pot%(1.815%)
+
+
+Possible hands might lost to are:
+
+Royal Flush    : 0.0030%
+Straight Flush : 0.018%
+Four of a Kind : 0.345%
+Full House     : 4.839%
+Flush          : 3.438%
+Straight       : 13.709%
+Three of a Kind: 12.336%
+Two Pair       : 15.887%
+
+Time taken to play 100000 poker games with 9 players (ms):1368.0
+Please enter number of players folded(0-6):
+0
+Please Enter Fourth card in River:
+j d
+Complete Percentage:
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90%
+You Have : One pair
+Win%(including split pot):                              46.582%
+Possible hands and their win percentages for you are
+Straight       (8.73%):              Win%(35.43%)               Split Pot%(58.293%)
+Three of a Kind(4.33%):              Win%(69.815%)              Split Pot%(1.57%)
+Two Pair       (26.076%):            Win%(36.911%)              Split Pot%(1.557%)
+One pair       (60.864%):            Win%(39.744%)              Split Pot%(1.788%)
+
+
+Possible hands might lost to are:
+
+Royal Flush    : 0.037%
+Straight Flush : 0.11%
+Four of a Kind : 0.127%
+Full House     : 3.081%
+Flush          : 5.74%
+Straight       : 15.505%
+Three of a Kind: 10.1%
+Two Pair       : 18.718%
+
+Time taken to play 100000 poker games with 9 players (ms):1444.0
+Please enter number of players folded(0-6):
+0
+Please Enter Fifth card in River:
+q h
+Complete Percentage:
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90%
+You Have : Straight
+Win%(including split pot):                              100.0%
+Possible hands and their win percentages for you are
+Straight       (100.0%):             Win%(38.278%)              Split Pot%(61.722%)
+
+
+Possible hands might lost to are:
+
+
+Time taken to play 100000 poker games with 9 players (ms):1238.0
+Please enter number of players folded(0-6):
+0
+Time taken to play one round poker game with 9 players (sec):50.589
