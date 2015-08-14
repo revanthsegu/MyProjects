@@ -1,0 +1,9 @@
+{
+  "type":"record",
+  "name":"WhiteHouseLog",
+  "namespace":"com.revanth.hadoop.avro",
+  "fields":[
+    {"name":"firstName", "type":"string", "default":"","doc":" First Name from White house visitor log"},
+    {"name":"lastName", "type":"string", "default":""}
+  ]
+}  
